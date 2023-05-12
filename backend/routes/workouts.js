@@ -1,4 +1,5 @@
 const express = require("express");
+const Workout = require("../models/workoutModel");
 
 const router = express.Router();
 
@@ -14,14 +15,16 @@ router.get("/:id", (req, res) => {
 
 //POST a new workout
 router.post("/", (req, res) => {
+  const { title, load, reps } = req.body;
+
   res.json({ mssg: "POST a new workout" });
 });
 
-//DELETE a new workout
+//DELETE a  workout
 router.delete("/:id", (req, res) => {
   res.json({ mssg: "DELETE a workout" });
 });
-//UPDATE a new workout
+//UPDATE a  workout
 router.patch("/:id", (req, res) => {
   res.json({ mssg: "UPDATE a  workout" });
 });
