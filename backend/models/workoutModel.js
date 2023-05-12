@@ -6,15 +6,15 @@ const workoutSchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
+      required: [true, "Title is required"],
     },
     reps: {
       type: Number,
-      required: true,
+      required: [true, "Reps is required"],
     },
     load: {
       type: Number,
-      required: true,
+      required: [true, "Load is required"],
     },
   },
   { timestamps: true }
